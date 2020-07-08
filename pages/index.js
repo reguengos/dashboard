@@ -14,7 +14,6 @@ import ElasticsearchHitCount from '../components/widgets/elasticsearch/hit-count
 import GitHubIssueCount from '../components/widgets/github/issue-count'
 
 // Theme
-//import lightTheme from '../styles/light-theme'
 import darkTheme from '../styles/dark-theme'
 
 export default () => (
@@ -50,7 +49,7 @@ export default () => (
         { label: 'Log4j Kotlin', path: 'Log4jKotlin', branch: 'master' }
       ]}
     />
-  
+
     <JenkinsJobHealth
       url='https://crossorigin.me/https://builds.apache.org'
       jobs={[
