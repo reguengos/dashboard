@@ -5,6 +5,7 @@ import DateTime from '../components/widgets/datetime'
 import PageSpeedInsightsScore from '../components/widgets/pagespeed-insights/score'
 import PageSpeedInsightsStats from '../components/widgets/pagespeed-insights/stats'
 import JiraIssueCount from '../components/widgets/jira/issue-count'
+import JiraIssueCount2 from '../components/widgets/jira/issue-count'
 import SonarQube from '../components/widgets/sonarqube'
 import JenkinsJobStatus from '../components/widgets/jenkins/job-status'
 import JenkinsJobHealth from '../components/widgets/jenkins/job-health'
@@ -29,13 +30,11 @@ export default () => (
       query='type=Bug AND project="Bitbucket Server" AND resolution=Unresolved ORDER BY priority DESC,created DESC'
     />
     
-    <JiraIssueCount
+    <JiraIssueCount2
       title='JIRA Open tasks'
       url='https://carlsberggbs.atlassian.net'
       query='type=task AND project="CPaaS DevOps" AND resolution=Unresolved ORDER BY priority DESC,created DESC'
     />
-
-   
 
     <SonarQube
       url='https://crossorigin.me/https://sonarcloud.io'
