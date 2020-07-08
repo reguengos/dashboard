@@ -17,7 +17,7 @@ import GitHubIssueCount from '../components/widgets/github/issue-count'
 import darkTheme from '../styles/dark-theme'
 
 export default () => (
-  <Dashboard theme={lightTheme}>
+  <Dashboard theme={darkTheme}>
     <DateTime />
 
     <PageSpeedInsightsScore url='https://github.com' />
