@@ -12,8 +12,8 @@ export default {
     password: process.env.JENKINS_PASS
   },
   jira: {
-    username: process.env.JIRA_USER,
-    password: process.env.JIRA_PASS
+    username: ptsoajoa@carlsberggroup.com,
+    password: mrI2gHh607RRCfNYzMhl717A
   },
   sonarqube: {
     username: process.env.SONARQUBE_USER,
