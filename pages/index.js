@@ -29,6 +29,12 @@ export default () => (
       url='https://crossorigin.me/https://jira.atlassian.com'
       query='type=Bug AND project="Bitbucket Server" AND resolution=Unresolved ORDER BY priority DESC,created DESC'
     />
+    
+    <JiraIssueCount
+      title='JIRA Open tasks'
+      url='https://carlsberggbs.atlassian.net'
+      query='type=task AND project="CPaaS DevOps" AND resolution=Unresolved ORDER BY priority DESC,created DESC'
+    />
 
    
 
