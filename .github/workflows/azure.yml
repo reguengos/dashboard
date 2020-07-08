@@ -44,30 +44,17 @@ jobs:
         npm install
         npm run build --if-present
     
-    - name: Build and push Docker images
-      uses: docker/build-push-action@v1.1.0
+ 
+    - name: Docker Build, Tag & Push
+      uses: belon/docker-build-push@v4.0
       with:
-        # Username used to log in to a Docker registry. If not set then no login will occur
+        # Name of the Docker image
+        image: ${{ secrets.AZURE_ACR_REPOSITORY }}
+        # Tags override for Docker image
+        tags: latest
+        # Target Docker registry
+        registry: ${{ secrets.AZURE_ACR_SERVER }}
+        
         username: ${{ secrets.AZURE_ACR_USER }}
         # Password or personal access token used to log in to a Docker registry. If not set then no login will occur
         password: ${{ secrets.AZURE_ACR_PASS }}
-        # Server address of Docker registry. If not set then will default to Docker Hub
-        registry: ${{ secrets.AZURE_ACR_SERVER }}
-        # Docker repository to tag the image with
-        repository: ${{ secrets.AZURE_ACR_REPOSITORY }}
-        # Comma-delimited list of tags. These will be added to the registry/repository to form the image's tags
-   
-        # Automatically tags the built image with the git reference as per the readme
-        # Automatically tags the built image with the git short SHA as per the readme
-        # Path to the build context
-        path: . # optional, default is .
-        # Path to the Dockerfile (Default is '{path}/Dockerfile')
-        dockerfile: ./Dockerfile# optional
-        # Sets the target stage to build
-        # Always attempt to pull a newer version of the image
-        # Comma-delimited list of build-time variables
-        # Comma-delimited list of images to consider as cache sources
-        # Comma-delimited list of labels to add to the built image
-        # Adds labels with git repository information to the built image
-        # Whether to push the image
-        push: true # optional, default is true
