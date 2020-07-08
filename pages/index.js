@@ -30,12 +30,7 @@ export default () => (
       query='type=Bug AND project="Bitbucket Server" AND resolution=Unresolved ORDER BY priority DESC,created DESC'
     />
 
-    <BitbucketPullRequestCount
-      title='Bitbucket Open PR'
-      url='https://crossorigin.me/https://bitbucket.typo3.com'
-      project='EXT'
-      repository='blog'
-    />
+   
 
     <SonarQube
       url='https://crossorigin.me/https://sonarcloud.io'
