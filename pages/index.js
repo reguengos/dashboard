@@ -39,19 +39,16 @@ export default () => (
     />
 
     <SonarQube
-      title='SQ instance 1' 
       url='https://crossorigin.me/https://sonarcloud.io'
       componentKey='com.icegreen:greenmail-parent'
     />
   
   <SonarQube
-      title='SQ instance 2'
       url='https://crossorigin.me/https://sonarcloud.io'
       componentKey='com.icegreen:greenmail-parent'
     />
 
     <JenkinsJobStatus
-      title='Jenkins instance 1'
       url='https://crossorigin.me/https://builds.apache.org'
       jobs={[
         { label: 'JMeter', path: 'JMeter-trunk' },
